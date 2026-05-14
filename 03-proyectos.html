@@ -40,8 +40,7 @@
           cola de trabajo inteligente. Configuré Omnichannel Routing con capacidades y habilidades de agente,
           definiendo reglas de enrutamiento basadas en prioridad, carga de trabajo y SLA para garantizar que
           cada caso llegase al agente más adecuado en el menor tiempo posible.
-        </p>
-        <p>
+
           Automaticé la tipificación de casos mediante Flows y reglas de asignación, eliminando la
           clasificación manual y reduciendo el tiempo de primera respuesta. Incorporé escalado automático
           por prioridad cuando los tiempos de resolución superaban umbrales definidos, asegurando el
@@ -64,8 +63,7 @@
           la interfaz nativa de Salesforce, adaptando la experiencia de usuario a los procesos
           comerciales específicos del cliente. Implementé lógica de negocio compleja en Apex,
           incluyendo triggers, clases de servicio y batch jobs para el procesamiento masivo de datos.
-        </p>
-        <p>
+      
           La solución requirió una arquitectura de integración multicapa: conecté Salesforce con
           ERPs externos (SAP) a través de plataformas middleware como MuleSoft,
           gestionando la transformación y orquestación de datos entre sistemas heterogéneos.
@@ -74,8 +72,7 @@
           mediante patrones de integración como el manejo de errores con reintentos, colas de mensajes
           y logs de auditoría. Implementé también Named Credentials y Auth Providers para gestionar
           de forma segura la autenticación con servicios de terceros.
-        </p>
-        <p>
+      
           Para garantizar la calidad del código, apliqué análisis estático con PMD y Salesforce
           Code Analyzer, revisé vulnerabilidades CRUD/FLS y SOQL Injection, y refactoricé siguiendo
           los principios SOLID y los límites de gobernanza de la plataforma (governor limits).
@@ -108,8 +105,7 @@
           El reto principal era unificar en una sola plataforma los diferentes puntos de contacto
           con el cliente —teléfono, email, portal web y mensajería— eliminando la fragmentación
           operativa entre departamentos de atención y operaciones de campo.
-        </p>
-        <p>
+      
           Implementé Omnichannel Routing adaptado a la casuística logística: enrutamiento
           diferenciado por tipo de incidencia (pérdida de paquete, retraso, dirección errónea,
           devolución), priorización automática según el SLA contratado por cada cliente y escalado
@@ -117,8 +113,7 @@
           automatizaron la tipificación de casos en el momento de entrada, asignando automáticamente
           el equipo responsable según la zona geográfica y el tipo de servicio, y lanzando
           notificaciones proactivas al cliente sin intervención del agente.
-        </p>
-        <p>
+      
           En el área comercial, integré Sales Cloud para el seguimiento de contratos logísticos
           y la gestión de cuentas clave, conectando oportunidades de renovación con el historial
           de incidencias del cliente para dar al equipo comercial visibilidad real del estado
@@ -148,8 +143,7 @@
           complejidad operativa del sector. El proyecto abarcó desde el diseño de la arquitectura
           de componentes hasta la puesta en producción, trabajando en un entorno enterprise con
           equipos multidisciplinares y estrictos requisitos de calidad y seguridad de código.
-        </p>
-        <p>
+      
           Desarrollé interfaces de usuario a medida utilizando Lightning Web Components (LWC)
           y componentes Aura, construyendo pantallas específicas para la gestión del ciclo de vida
           del vehículo: configuradores de oferta, fichas técnicas dinámicas, seguimiento del estado
@@ -158,8 +152,7 @@
           integración en diferentes páginas Lightning sin duplicar lógica. La comunicación entre
           componentes se gestionó mediante eventos y el patrón de publicación/suscripción con
           Lightning Message Service.
-        </p>
-        <p>
+     
           Uno de los requisitos críticos del proyecto fue el cumplimiento de los estándares de
           seguridad de código exigidos por el cliente. Utilicé <strong>Checkmarx</strong> como
           herramienta de análisis estático de seguridad (SAST), identificando y corrigiendo
@@ -194,8 +187,7 @@
           código heredado sin documentación suficiente, adaptando cada nueva funcionalidad para
           que coexistiera de forma estable con la lógica preexistente sin romper procesos críticos
           en producción.
-        </p>
-        <p>
+      
           Diseñé e implementé la solución de gestión de incidencias sobre Service Cloud,
           cubriendo el ciclo de vida completo del siniestro: apertura, asignación, seguimiento,
           escalado y resolución. Desarrollé componentes LWC a medida para la gestión de pólizas
@@ -204,8 +196,7 @@
           transacciones. Los Flows automatizaron la creación y reasignación de casos según
           tipo de incidencia, cobertura contratada y disponibilidad del equipo gestor,
           reduciendo la intervención manual en la operativa diaria.
-        </p>
-        <p>
+     
           Gestioné la integración de <strong>Email-to-Case</strong> como canal principal de
           entrada de incidencias, configurando reglas de enrutamiento por remitente, asunto
           y palabras clave para clasificar automáticamente los correos entrantes en el tipo
@@ -213,16 +204,14 @@
           de la aseguradora, asegurando que las llamadas entrantes generasen casos en Salesforce
           con el contexto del cliente precargado, eliminando la introducción manual de datos
           por parte del agente y acortando el tiempo de gestión en cada llamada.
-        </p>
-        <p>
+       
           En el ámbito de la seguridad, trabajé a nivel de <strong>configuración DNS</strong>
           para garantizar la correcta autenticación y entregabilidad del correo electrónico
           corporativo integrado con Salesforce: configuración de registros SPF, DKIM y DMARC
           para evitar que los emails generados por la plataforma fuesen clasificados como spam
           o rechazados por los servidores de los clientes, aspecto crítico en un sector donde
           la comunicación por email tiene validez contractual y legal.
-        </p>
-        <p>
+       
           Trabajar de forma autónoma en este proyecto implicó tomar decisiones de arquitectura
           de forma independiente, priorizar incidencias críticas en producción, documentar
           el código heredado conforme se analizaba y garantizar la continuidad del servicio
