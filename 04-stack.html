@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marisa Miguel Arnal — Stack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">&lt;marisa.dev/&gt;</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="02-sobre-mi.html">Sobre mí</a></li>
+    <li><a href="03-proyectos.html">Proyectos</a></li>
+    <li><a href="04-stack.html" class="active">Stack</a></li>
+    <li><a href="05-contacto.html">Contacto</a></li>
+  </ul>
+  <a href="05-contacto.html" class="btn-nav">Hablemos →</a>
+</nav>
+
+<section id="stack">
+  <div class="section-tag">Capacidades</div>
+  <h2 class="section-title">Mi <span class="accent">Stack</span></h2>
+
+  <div class="stack-category">Técnico</div>
+  <div class="stack-grid">
+    <div class="stack-pill">Apex</div>
+    <div class="stack-pill">Salesforce LWC</div>
+    <div class="stack-pill">Aura Component</div>
+    <div class="stack-pill">SOQL / SOSL</div>
+    <div class="stack-pill">REST/SOAP APIs</div>
+    <div class="stack-pill">Integraciones API avanzadas</div>
+    <div class="stack-pill">Agent Flow / Einstein Agents</div>
+    <div class="stack-pill">Flows</div>
+    <div class="stack-pill">Process Builder</div>
+  </div>
+
+  <div class="stack-category">Organizacional</div>
+  <div class="stack-grid">
+    <div class="stack-pill">Bug Management</div>
+    <div class="stack-pill">Backlog Refinement</div>
+    <div class="stack-pill">Product Support</div>
+    <div class="stack-pill">Reporting</div>
+    <div class="stack-pill">Customer Experience</div>
+    <div class="stack-pill">Omnichannel</div>
+  </div>
+
+  <div class="stack-category">Metodológico</div>
+  <div class="stack-grid">
+    <div class="stack-pill">Agile / Scrum</div>
+    <div class="stack-pill">DevOps para Salesforce</div>
+    <div class="stack-pill">CI/CD con Git</div>
+    <div class="stack-pill">Trailhead / Formación continua</div>
+    <div class="stack-pill">Security & Compliance</div>
+  </div>
+
+  <div class="stack-category">Certificaciones</div>
+  <div class="stack-grid">
+    <div class="stack-pill">Salesforce Associate</div>
+    <div class="stack-pill">Salesforce AI Associate</div>
+    <div class="stack-pill">Data Cloud Consultant</div>
+    <div class="stack-pill">Platform Developer I</div>
+    <div class="stack-pill">Agentforce Specialist</div>
+    <div class="stack-pill">Ethical Hacking Essentials EC Council</div>
+  </div>
+
+  <div class="stack-category">Herramientas</div>
+  <div class="stack-grid">
+    <div class="stack-pill">Mulesoft</div>
+    <div class="stack-pill">Postman</div>
+    <div class="stack-pill">CheckMarx</div>
+    <div class="stack-pill">Data Loader</div>
+    <div class="stack-pill">Workbench</div>
+    <div class="stack-pill">DBeaver</div>
+    <div class="stack-pill">OneTrust</div>
+  </div>
+
+  <div class="stack-category">Lenguajes y bases de datos</div>
+  <div class="stack-grid">
+    <div class="stack-pill">Java</div>
+    <div class="stack-pill">JavaScript</div>
+    <div class="stack-pill">Python</div>
+    <div class="stack-pill">MySQL</div>
+    <div class="stack-pill">MariaDB</div>
+    <div class="stack-pill">Oracle</div>
+    <div class="stack-pill">SQLite</div>
+  </div>
+</section>
+
+<footer>
+  Hecho con <span>♥</span> por Marisa Miguel Arnal · <span>&lt;marisa.dev/&gt;</span>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

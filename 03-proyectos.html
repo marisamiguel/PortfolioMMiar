@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marisa Miguel Arnal — Proyectos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">&lt;marisa.dev/&gt;</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="02-sobre-mi.html">Sobre mí</a></li>
+    <li><a href="03-proyectos.html" class="active">Proyectos</a></li>
+    <li><a href="04-stack.html">Stack</a></li>
+    <li><a href="05-contacto.html">Contacto</a></li>
+  </ul>
+  <a href="05-contacto.html" class="btn-nav">Hablemos →</a>
+</nav>
+
+<section id="proyectos">
+  <div class="section-tag">Proyectos</div>
+  <h2 class="section-title">Casos de <span class="accent">éxito</span></h2>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-tag">SERVICE CLOUD · AUTOMATIZACIÓN</div>
+      <h3>Gestión avanzada de casos</h3>
+      <p>Diseñé una solución de gestión de casos con Omnichannel, escalado por prioridad y automatización de tipificación, mejorando el tiempo de respuesta y la eficiencia operativa.</p>
+      <div class="project-techs">
+        <span class="tech-tag">Service Cloud</span>
+        <span class="tech-tag">Flows</span>
+        <span class="tech-tag">Omnichannel</span>
+        <span class="tech-tag">Reports</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">SALES CLOUD · INTEGRACIÓN</div>
+      <h3>Plataforma de ventas personalizada</h3>
+      <p>Implementé funcionalidades personalizadas con Aura y LWC, integré servicios externos y aseguré el cumplimiento de calidad con análisis de seguridad y refactorización de código.</p>
+      <div class="project-techs">
+        <span class="tech-tag">Sales Cloud</span>
+        <span class="tech-tag">Apex</span>
+        <span class="tech-tag">LWC</span>
+        <span class="tech-tag">APIs REST</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">LOGÍSTICA · OPERACIONES</div>
+      <h3>Optimización de operaciones</h3>
+      <p>Creé soluciones a medida para servicios y ventas, incluyendo automatización de procesos, sistemas de priorización y dashboards ejecutivos para seguimiento en tiempo real.</p>
+      <div class="project-techs">
+        <span class="tech-tag">Service Cloud</span>
+        <span class="tech-tag">Sales Cloud</span>
+        <span class="tech-tag">Automation</span>
+        <span class="tech-tag">Dashboards</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">PORTFOLIO · UI</div>
+      <h3>Presentación profesional</h3>
+      <p>Este portfolio está construido con HTML, CSS y una estructura modular que destaca experiencia, habilidades y resultados en Salesforce y desarrollo web.</p>
+      <div class="project-techs">
+        <span class="tech-tag">HTML</span>
+        <span class="tech-tag">CSS</span>
+        <span class="tech-tag">Responsive</span>
+        <span class="tech-tag">UX</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Hecho con <span>♥</span> por Marisa Miguel Arnal · <span>&lt;marisa.dev/&gt;</span>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

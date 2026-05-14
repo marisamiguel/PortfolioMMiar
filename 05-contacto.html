@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marisa Miguel Arnal — Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">&lt;marisa.dev/&gt;</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="02-sobre-mi.html">Sobre mí</a></li>
+    <li><a href="03-proyectos.html">Proyectos</a></li>
+    <li><a href="04-stack.html">Stack</a></li>
+    <li><a href="05-contacto.html" class="active">Contacto</a></li>
+  </ul>
+  <a href="05-contacto.html" class="btn-nav">Hablemos →</a>
+</nav>
+
+<section id="contacto">
+  <div class="contact-inner">
+    <div class="section-tag">Contacto</div>
+    <h2 class="section-title">¿Hablamos?</h2>
+    <p class="contact-lead">
+      Siempre abierta a nuevas oportunidades, colaboraciones o simplemente una buena conversación sobre tecnología.
+    </p>
+    <a href="mailto:marisa@marisa.dev" class="btn-primary" style="display:inline-flex;">
+      Envíame un email →
+    </a>
+    <div class="contact-links">
+      <a href="https://github.com/" class="contact-link">GitHub</a>
+      <a href="https://linkedin.com/" class="contact-link">LinkedIn</a>
+      <a href="https://trailhead.salesforce.com/" class="contact-link">Trailhead</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Hecho con <span>♥</span> por Marisa Miguel Arnal · <span>&lt;marisa.dev/&gt;</span>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

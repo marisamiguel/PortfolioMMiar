@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marisa Miguel Arnal — Sobre mí</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">&lt;marisa.dev/&gt;</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="02-sobre-mi.html" class="active">Sobre mí</a></li>
+    <li><a href="03-proyectos.html">Proyectos</a></li>
+    <li><a href="04-stack.html">Stack</a></li>
+    <li><a href="05-contacto.html">Contacto</a></li>
+  </ul>
+  <a href="05-contacto.html" class="btn-nav">Hablemos →</a>
+</nav>
+
+<section id="sobre-mi">
+  <div class="section-tag">Sobre mí</div>
+  <h2 class="section-title">
+    Salesforce Developer<br>
+    <span class="accent">con más de 4,5 años de experiencia.</span>
+  </h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <blockquote class="about-quote">
+        "Implemento soluciones Salesforce que mejoran flujos, automatizan procesos y entregan valor real." 
+      </blockquote>
+      <p>
+        Soy una desarrolladora especializada en Salesforce con experiencia en la implementación
+        de soluciones CRM adaptadas a procesos de negocio complejos. Mi trabajo combina diseño técnico,
+        integración de sistemas, automatización de flujos y mejora de la experiencia de cliente.
+      </p>
+      <p>
+        Tengo una trayectoria sólida en entornos multinacionales y proyectos de transformación digital.
+        Mi enfoque es práctico: soluciones escalables, despliegues seguros y documentación clara.
+      </p>
+      <p>
+        Cuento con experiencia en Agent Flow y en el diseño de flujos conversacionales para atención digital,
+        así como en integraciones avanzadas entre APIs y otras plataformas empresariales.
+      </p>
+      <p>
+        Trabajo con metodologías Agile/Scrum y DevOps para Salesforce, integrando continuos despliegues con Git
+        y SFDX para mantener entregas frecuentes y estables.
+      </p>
+    </div>
+
+    <div class="quick-data">
+      <div class="quick-data-label">Datos rápidos</div>
+      <div class="quick-row"><span class="key">Rol</span><span class="val">Salesforce Developer</span></div>
+      <div class="quick-row"><span class="key">Experiencia</span><span class="val">+4,5 años en Salesforce</span></div>
+      <div class="quick-row"><span class="key">Áreas</span><span class="val">CRM, Service Cloud, Sales Cloud</span></div>
+      <div class="quick-row"><span class="key">Sectores</span><span class="val">Seguros, automoción, logística, energía</span></div>
+      <div class="quick-row"><span class="key">Metodologías</span><span class="val">Agile, Scrum, DevOps</span></div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <h3 class="timeline-title">Trayectoria profesional</h3>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div>
+        <div class="tl-date">2024 — Actualidad</div>
+        <div class="tl-role">Salesforce Developer Senior</div>
+        <div class="tl-company">Capgemini Spain</div>
+        <div class="tl-desc">Lidero el diseño y la implementación de soluciones Salesforce, integraciones con sistemas externos y automatización avanzada de procesos en entornos complejos.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div>
+        <div class="tl-date">2022 — 2024</div>
+        <div class="tl-role">Salesforce Developer</div>
+        <div class="tl-company">Accenture Spain</div>
+        <div class="tl-desc">Gestión de backlog, modelado de flujos, pruebas de código y despliegues en ciclos Agile, con foco en estabilidad y eficiencia.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div>
+        <div class="tl-date">2020 — 2022</div>
+        <div class="tl-role">Junior Salesforce Developer</div>
+        <div class="tl-company">Prides Cooperative Society</div>
+        <div class="tl-desc">Implementé funcionalidades en Apex y LWC, realicé integraciones SOQL/REST y participé en la automatización de procesos de servicio.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div>
+        <div class="tl-date">2018 — 2020</div>
+        <div class="tl-role">Coordinación de proyectos</div>
+        <div class="tl-company">Gestión de equipos y procesos</div>
+        <div class="tl-desc">Gestioné el seguimiento de entregas, la planificación de tareas y la calidad de la documentación técnica en proyectos digitales.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Hecho con <span>♥</span> por Marisa Miguel Arnal · <span>&lt;marisa.dev/&gt;</span>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
