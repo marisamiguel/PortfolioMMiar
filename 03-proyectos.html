@@ -27,249 +27,456 @@
   </nav>
 
   <section id="proyectos">
-    <div class="section-tag">Proyectos</div>
-    <h2 class="section-title">Casos de <span class="accent">éxito</span></h2>
 
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-tag">SERVICE CLOUD · AUTOMATIZACIÓN</div>
+  <div class="section-tag">Proyectos</div>
+
+  <h2 class="section-title">
+    Casos de <span class="accent">éxito</span>
+  </h2>
+
+  <div class="projects-grid">
+
+    <!-- FEATURED 1 -->
+    <article class="project-card featured reveal">
+
+      <div class="project-body">
+
+        <span class="project-icon">🎧</span>
+
+        <div class="project-tag">
+          SERVICE CLOUD · AUTOMATIZACIÓN
+        </div>
+
         <h3>Gestión avanzada de casos</h3>
+
         <p>
           Diseñé e implementé una solución completa de atención al cliente sobre Salesforce Service Cloud,
-          centralizando todos los canales de entrada (email,teléfono) en una única
-          cola de trabajo inteligente. Configuré Omnichannel Routing con capacidades y habilidades de agente,
-          definiendo reglas de enrutamiento basadas en prioridad, carga de trabajo y SLA para garantizar que
-          cada caso llegase al agente más adecuado en el menor tiempo posible.
-
-          Automaticé la tipificación de casos mediante Flows y reglas de asignación, eliminando la
-          clasificación manual y reduciendo el tiempo de primera respuesta. Incorporé escalado automático
-          por prioridad cuando los tiempos de resolución superaban umbrales definidos, asegurando el
-          cumplimiento de los acuerdos de nivel de servicio. Complementé la solución con dashboards
-          y reportes en tiempo real para supervisores, con métricas clave como AHT, FCR y tiempo de
-          espera en cola, permitiendo una gestión operativa basada en datos.
+          centralizando todos los canales de entrada (email, teléfono) en una única cola de trabajo inteligente.
         </p>
+
+        <p>
+          Configuré Omnichannel Routing con capacidades y habilidades de agente,
+          definiendo reglas de enrutamiento basadas en prioridad, carga de trabajo y SLA
+          para garantizar que cada caso llegase al agente más adecuado en el menor tiempo posible.
+        </p>
+
+        <p>
+          Automaticé la tipificación de casos mediante Flows y reglas de asignación,
+          eliminando la clasificación manual y reduciendo el tiempo de primera respuesta.
+        </p>
+
+        <p>
+          Incorporé escalado automático por prioridad cuando los tiempos de resolución
+          superaban umbrales definidos, asegurando el cumplimiento de los acuerdos
+          de nivel de servicio.
+        </p>
+
+        <p>
+          Complementé la solución con dashboards y reportes en tiempo real para supervisores,
+          con métricas clave como AHT, FCR y tiempo de espera en cola,
+          permitiendo una gestión operativa basada en datos.
+        </p>
+
+        <div class="project-stat">
+          Atención omnicanal centralizada y automatizada
+        </div>
+
         <div class="project-techs">
           <span class="tech-tag">Service Cloud</span>
           <span class="tech-tag">Flows</span>
           <span class="tech-tag">Omnichannel</span>
           <span class="tech-tag">Reports</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-tag">SALES CLOUD · INTEGRACIÓN</div>
-        <h3>Implementación de solución de integración</h3>
-        <p>
-          Desarrollé componentes a medida con Lightning Web Components (LWC) y Aura para extender
-          la interfaz nativa de Salesforce, adaptando la experiencia de usuario a los procesos
-          comerciales específicos del cliente. Implementé lógica de negocio compleja en Apex,
-          incluyendo triggers, clases de servicio y batch jobs para el procesamiento masivo de datos.
-      
-          La solución requirió una arquitectura de integración multicapa: conecté Salesforce con
-          ERPs externos (SAP) a través de plataformas middleware como MuleSoft,
-          gestionando la transformación y orquestación de datos entre sistemas heterogéneos.
-          Diseñé APIs REST y SOAP para el intercambio bidireccional de información con bases de
-          datos relacionales externas (SQL Server, PostgreSQL), asegurando la consistencia de datos
-          mediante patrones de integración como el manejo de errores con reintentos, colas de mensajes
-          y logs de auditoría. Implementé también Named Credentials y Auth Providers para gestionar
-          de forma segura la autenticación con servicios de terceros.
-      
-          Para garantizar la calidad del código, apliqué análisis estático con PMD y Salesforce
-          Code Analyzer, revisé vulnerabilidades CRUD/FLS y SOQL Injection, y refactoricé siguiendo
-          los principios SOLID y los límites de gobernanza de la plataforma (governor limits).
-          El perfil técnico necesario para este tipo de proyectos abarca dominio de Apex, LWC,
-          SOQL/SOSL, conocimiento de patrones de integración enterprise, manejo de herramientas
-          CI/CD como Salesforce DX y GitHub Actions, y experiencia con al menos una plataforma
-          middleware de orquestación.
-        </p>
-        <span class="tech-tag">Sales Cloud</span>
-        <span class="tech-tag">Apex & Triggers</span>
-        <span class="tech-tag">LWC & Aura</span>
-        <span class="tech-tag">APIs REST / SOAP</span>
-        <span class="tech-tag">MuleSoft</span>
-        <span class="tech-tag">Dell Boomi</span>
-        <span class="tech-tag">SAP / Oracle ERP</span>
-        <span class="tech-tag">SQL Server</span>
-        <span class="tech-tag">Named Credentials</span>
-        <span class="tech-tag">SFDX & CI/CD</span>
-        <span class="tech-tag">PMD / Code Analyzer</span>
-        <span class="tech-tag">Governor Limits</span>
-      </div>
-
-      <div class="project-card">
-        <div class="project-tag">LOGÍSTICA · SERVICE CLOUD · OMNICHANNEL</div>
-        <h3>Optimización de operaciones para empresa de logística</h3>
-        <p>
-          Lideré el diseño e implementación de una solución integral sobre Salesforce Service Cloud
-          para una empresa del sector logístico, donde la gestión de incidencias, entregas fallidas
-          y reclamaciones de cliente representaban un volumen de casos crítico y constante.
-          El reto principal era unificar en una sola plataforma los diferentes puntos de contacto
-          con el cliente —teléfono, email, portal web y mensajería— eliminando la fragmentación
-          operativa entre departamentos de atención y operaciones de campo.
-      
-          Implementé Omnichannel Routing adaptado a la casuística logística: enrutamiento
-          diferenciado por tipo de incidencia (pérdida de paquete, retraso, dirección errónea,
-          devolución), priorización automática según el SLA contratado por cada cliente y escalado
-          urgente para envíos con temperatura controlada o mercancía de alto valor. Los Flows
-          automatizaron la tipificación de casos en el momento de entrada, asignando automáticamente
-          el equipo responsable según la zona geográfica y el tipo de servicio, y lanzando
-          notificaciones proactivas al cliente sin intervención del agente.
-      
-          En el área comercial, integré Sales Cloud para el seguimiento de contratos logísticos
-          y la gestión de cuentas clave, conectando oportunidades de renovación con el historial
-          de incidencias del cliente para dar al equipo comercial visibilidad real del estado
-          operativo. Diseñé dashboards ejecutivos con métricas operativas en tiempo real:
-          volumen de casos por zona, tasa de resolución en primer contacto (FCR), cumplimiento
-          de SLA por tipo de envío y ranking de incidencias recurrentes, permitiendo a los
-          responsables de operaciones tomar decisiones correctivas de forma inmediata.
-        </p>
-        <div class="project-techs">
-          <span class="tech-tag">Service Cloud</span>
-          <span class="tech-tag">Sales Cloud</span>
-          <span class="tech-tag">Omnichannel Routing</span>
-          <span class="tech-tag">Flows & Automation</span>
-          <span class="tech-tag">Escalation Rules</span>
-          <span class="tech-tag">SLA Management</span>
-          <span class="tech-tag">Dashboards en tiempo real</span>
+          <span class="tech-tag">Dashboards</span>
           <span class="tech-tag">Case Management</span>
         </div>
+
       </div>
-      <div class="project-card">
-        <div class="project-tag">AUTOMOCIÓN · DESARROLLO A MEDIDA · SEGURIDAD</div>
-        <h3>Plataforma Salesforce a medida para el sector de automoción</h3>
+
+      <div class="project-body">
+
+        <div class="impact-panel">
+
+          <div class="impact-label">
+            Detalles del proyecto
+          </div>
+
+          <div class="impact-row">
+            <span class="k">Sector</span>
+            <span class="v">Customer Service</span>
+          </div>
+
+          <div class="impact-row">
+            <span class="k">Cloud</span>
+            <span class="v">Service Cloud</span>
+          </div>
+
+          <div class="impact-row">
+            <span class="k">Automatización</span>
+            <span class="v">Flows & Routing</span>
+          </div>
+
+          <div class="impact-row">
+            <span class="k">KPIs</span>
+            <span class="v">AHT · FCR · SLA</span>
+          </div>
+
+          <div class="impact-row">
+            <span class="k">Rol</span>
+            <span class="v">Salesforce Developer</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="project-card reveal">
+
+      <span class="project-icon">🔗</span>
+
+      <div class="project-tag">
+        SALES CLOUD · INTEGRACIÓN
+      </div>
+
+      <h3>Implementación de solución de integración</h3>
+
+      <p>
+        Desarrollé componentes a medida con Lightning Web Components (LWC) y Aura
+        para extender la interfaz nativa de Salesforce,
+        adaptando la experiencia de usuario a los procesos comerciales específicos del cliente.
+      </p>
+
+      <p>
+        Implementé lógica de negocio compleja en Apex,
+        incluyendo triggers, clases de servicio y batch jobs
+        para el procesamiento masivo de datos.
+      </p>
+
+      <p>
+        La solución requirió una arquitectura de integración multicapa:
+        conecté Salesforce con ERPs externos (SAP) a través de plataformas middleware como MuleSoft,
+        gestionando la transformación y orquestación de datos entre sistemas heterogéneos.
+      </p>
+
+      <p>
+        Diseñé APIs REST y SOAP para el intercambio bidireccional de información
+        con bases de datos relacionales externas (SQL Server, PostgreSQL),
+        asegurando la consistencia de datos mediante patrones de integración
+        como el manejo de errores con reintentos, colas de mensajes y logs de auditoría.
+      </p>
+
+      <p>
+        Implementé también Named Credentials y Auth Providers
+        para gestionar de forma segura la autenticación con servicios de terceros.
+      </p>
+
+      <p>
+        Para garantizar la calidad del código,
+        apliqué análisis estático con PMD y Salesforce Code Analyzer,
+        revisé vulnerabilidades CRUD/FLS y SOQL Injection,
+        y refactoricé siguiendo principios SOLID y governor limits.
+      </p>
+
+      <div class="project-stat">
+        Arquitectura enterprise e integración multicapa
+      </div>
+
+      <div class="project-techs">
+        <span class="tech-tag">Sales Cloud</span>
+        <span class="tech-tag">Apex</span>
+        <span class="tech-tag">LWC</span>
+        <span class="tech-tag">Aura</span>
+        <span class="tech-tag">REST / SOAP</span>
+        <span class="tech-tag">MuleSoft</span>
+        <span class="tech-tag">Dell Boomi</span>
+        <span class="tech-tag">SAP</span>
+        <span class="tech-tag">SQL Server</span>
+        <span class="tech-tag">PostgreSQL</span>
+        <span class="tech-tag">CI/CD</span>
+      </div>
+
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="project-card reveal">
+
+      <span class="project-icon">📦</span>
+
+      <div class="project-tag">
+        LOGÍSTICA · SERVICE CLOUD · OMNICHANNEL
+      </div>
+
+      <h3>Optimización de operaciones para empresa logística</h3>
+
+      <p>
+        Lideré el diseño e implementación de una solución integral sobre Salesforce Service Cloud
+        para una empresa del sector logístico,
+        donde la gestión de incidencias, entregas fallidas y reclamaciones
+        representaban un volumen de casos crítico y constante.
+      </p>
+
+      <p>
+        El reto principal era unificar en una sola plataforma
+        los diferentes puntos de contacto con el cliente:
+        teléfono, email, portal web y mensajería,
+        eliminando la fragmentación operativa entre departamentos.
+      </p>
+
+      <p>
+        Implementé Omnichannel Routing adaptado a la casuística logística:
+        pérdida de paquete, retrasos, devoluciones y mercancía prioritaria,
+        con priorización automática según SLA contratado.
+      </p>
+
+      <p>
+        Los Flows automatizaron la tipificación de casos,
+        asignando automáticamente el equipo responsable
+        según zona geográfica y tipo de servicio.
+      </p>
+
+      <p>
+        Integré Sales Cloud para conectar oportunidades de renovación
+        con el historial de incidencias del cliente,
+        aportando visibilidad operativa al área comercial.
+      </p>
+
+      <p>
+        Diseñé dashboards ejecutivos con métricas en tiempo real:
+        volumen de casos, FCR, cumplimiento SLA
+        y ranking de incidencias recurrentes.
+      </p>
+
+      <div class="project-stat">
+        Operaciones centralizadas y trazabilidad en tiempo real
+      </div>
+
+      <div class="project-techs">
+        <span class="tech-tag">Service Cloud</span>
+        <span class="tech-tag">Sales Cloud</span>
+        <span class="tech-tag">Flows</span>
+        <span class="tech-tag">Omnichannel</span>
+        <span class="tech-tag">Dashboards</span>
+        <span class="tech-tag">SLA Management</span>
+      </div>
+
+    </article>
+
+    <!-- FEATURED 2 -->
+    <article class="project-card featured reveal">
+
+      <div class="project-body">
+
+        <span class="project-icon">🚗</span>
+
+        <div class="project-tag">
+          AUTOMOCIÓN · SEGURIDAD · DESARROLLO
+        </div>
+
+        <h3>Plataforma Salesforce para automoción</h3>
+
         <p>
           Participé en la implementación de una solución Salesforce completamente personalizada
-          para una empresa del sector de automoción, donde los procesos de venta de vehículos,
-          gestión de concesionarios y atención posventa requerían una plataforma adaptada a la
-          complejidad operativa del sector. El proyecto abarcó desde el diseño de la arquitectura
-          de componentes hasta la puesta en producción, trabajando en un entorno enterprise con
-          equipos multidisciplinares y estrictos requisitos de calidad y seguridad de código.
-      
-          Desarrollé interfaces de usuario a medida utilizando Lightning Web Components (LWC)
-          y componentes Aura, construyendo pantallas específicas para la gestión del ciclo de vida
-          del vehículo: configuradores de oferta, fichas técnicas dinámicas, seguimiento del estado
-          de entrega y módulos de gestión de garantías. Cada componente fue diseñado siguiendo
-          los principios de reutilización y separación de responsabilidades, permitiendo su
-          integración en diferentes páginas Lightning sin duplicar lógica. La comunicación entre
-          componentes se gestionó mediante eventos y el patrón de publicación/suscripción con
-          Lightning Message Service.
-     
-          Uno de los requisitos críticos del proyecto fue el cumplimiento de los estándares de
-          seguridad de código exigidos por el cliente. Utilicé <strong>Checkmarx</strong> como
-          herramienta de análisis estático de seguridad (SAST), identificando y corrigiendo
-          vulnerabilidades en el código Apex y JavaScript: inyecciones SOQL, exposición de datos
-          sensibles, ausencia de validación CRUD/FLS, referencias inseguras en LWC y problemas
-          de Cross-Site Scripting (XSS). Cada entrega pasaba por un ciclo de escaneo, revisión
-          de hallazgos, remediación y nueva validación antes de ser promovida al entorno de
-          producción, garantizando un código limpio, seguro y auditable.
+          para una empresa del sector de automoción,
+          donde los procesos de venta, concesionarios y posventa
+          requerían una plataforma adaptada a la complejidad operativa del sector.
         </p>
+
+        <p>
+          Desarrollé interfaces de usuario a medida utilizando Lightning Web Components (LWC)
+          y componentes Aura,
+          construyendo pantallas específicas para configuradores de oferta,
+          fichas técnicas dinámicas y módulos de garantías.
+        </p>
+
+        <p>
+          Cada componente fue diseñado siguiendo principios de reutilización
+          y separación de responsabilidades,
+          permitiendo integración en diferentes páginas Lightning
+          sin duplicar lógica.
+        </p>
+
+        <p>
+          La comunicación entre componentes se gestionó mediante eventos
+          y Lightning Message Service.
+        </p>
+
+        <p>
+          Utilicé Checkmarx como herramienta SAST,
+          identificando y corrigiendo vulnerabilidades SOQL Injection,
+          CRUD/FLS, XSS y exposición insegura de datos.
+        </p>
+
+        <p>
+          Cada entrega pasaba por un ciclo de escaneo,
+          revisión de hallazgos, remediación y validación
+          antes de desplegar en producción.
+        </p>
+
+        <div class="project-stat">
+          Desarrollo enterprise con foco en seguridad y escalabilidad
+        </div>
+
         <div class="project-techs">
           <span class="tech-tag">Sales Cloud</span>
           <span class="tech-tag">LWC</span>
           <span class="tech-tag">Aura</span>
-          <span class="tech-tag">Apex & Triggers</span>
-          <span class="tech-tag">Flows & Approvals</span>
-          <span class="tech-tag">Batch Jobs</span>
-          <span class="tech-tag">Lightning Message Service</span>
-          <span class="tech-tag">fflib Architecture</span>
+          <span class="tech-tag">Apex</span>
           <span class="tech-tag">Checkmarx</span>
-          <span class="tech-tag">CRUD/FLS & XSS</span>
           <span class="tech-tag">CI/CD</span>
+          <span class="tech-tag">fflib</span>
         </div>
-      </div>
-      <div class="project-card">
-        <div class="project-tag">SEGUROS · SERVICE CLOUD · ARQUITECTURA LEGACY</div>
-        <h3>Transformación digital de operaciones en empresa aseguradora</h3>
-        <p>
-          Asumí en solitario la responsabilidad técnica completa de la plataforma Salesforce
-          Service Cloud de una empresa del sector asegurador, gestionando tanto el mantenimiento
-          evolutivo de un sistema legacy como el diseño e implementación de nuevos desarrollos
-          a medida. El mayor reto del proyecto fue la necesidad de comprender, respetar e integrar
-          código heredado sin documentación suficiente, adaptando cada nueva funcionalidad para
-          que coexistiera de forma estable con la lógica preexistente sin romper procesos críticos
-          en producción.
-      
-          Diseñé e implementé la solución de gestión de incidencias sobre Service Cloud,
-          cubriendo el ciclo de vida completo del siniestro: apertura, asignación, seguimiento,
-          escalado y resolución. Desarrollé componentes LWC a medida para la gestión de pólizas
-          y siniestros, con lógica Apex encapsulada en servicios reutilizables y triggers
-          optimizados para respetar los governor limits en un entorno con alto volumen de
-          transacciones. Los Flows automatizaron la creación y reasignación de casos según
-          tipo de incidencia, cobertura contratada y disponibilidad del equipo gestor,
-          reduciendo la intervención manual en la operativa diaria.
-     
-          Gestioné la integración de <strong>Email-to-Case</strong> como canal principal de
-          entrada de incidencias, configurando reglas de enrutamiento por remitente, asunto
-          y palabras clave para clasificar automáticamente los correos entrantes en el tipo
-          de caso correcto. Integré la plataforma con el <strong>call center</strong> externo
-          de la aseguradora, asegurando que las llamadas entrantes generasen casos en Salesforce
-          con el contexto del cliente precargado, eliminando la introducción manual de datos
-          por parte del agente y acortando el tiempo de gestión en cada llamada.
-       
-          En el ámbito de la seguridad, trabajé a nivel de <strong>configuración DNS</strong>
-          para garantizar la correcta autenticación y entregabilidad del correo electrónico
-          corporativo integrado con Salesforce: configuración de registros SPF, DKIM y DMARC
-          para evitar que los emails generados por la plataforma fuesen clasificados como spam
-          o rechazados por los servidores de los clientes, aspecto crítico en un sector donde
-          la comunicación por email tiene validez contractual y legal.
-       
-          Trabajar de forma autónoma en este proyecto implicó tomar decisiones de arquitectura
-          de forma independiente, priorizar incidencias críticas en producción, documentar
-          el código heredado conforme se analizaba y garantizar la continuidad del servicio
-          mientras se modernizaba la plataforma de forma progresiva. Una experiencia que
-          consolidó tanto las competencias técnicas como la capacidad de gestión integral
-          de un proyecto Salesforce de extremo a extremo.
-        </p>
-        <div class="project-techs">
-          <span class="tech-tag">Service Cloud</span>
-          <span class="tech-tag">Apex & Triggers</span>
-          <span class="tech-tag">LWC</span>
-          <span class="tech-tag">Flows</span>
-          <span class="tech-tag">Email-to-Case</span>
-          <span class="tech-tag">Call Center Integration</span>
-          <span class="tech-tag">SPF / DKIM / DMARC</span>
-          <span class="tech-tag">Legacy Code Migration</span>
-          <span class="tech-tag">Case Management</span>
-          <span class="tech-tag">Governor Limits</span>
-        </div>
+
       </div>
 
-      <div class="project-card">
-        <div class="project-tag">PORTFOLIO · UI</div>
-        <h3>Presentación profesional</h3>
-        <p>Este portfolio está construido con HTML, CSS y una estructura modular que destaca experiencia, habilidades y
-          resultados en Salesforce y desarrollo web.</p>
-        <div class="project-techs">
-          <span class="tech-tag">HTML</span>
-          <span class="tech-tag">CSS</span>
-          <span class="tech-tag">Responsive</span>
-          <span class="tech-tag">UX</span>
+      <div class="project-body">
+
+        <div class="impact-panel">
+
+          <div class="impact-label">
+            Arquitectura técnica
+          </div>
+
+          <div class="impact-row">
+            <span class="k">Frontend</span>
+            <span class="v">LWC & Aura</span>
+          </div>
+
+          <div class="impact-row">
+            <span class="k">Backend</span>
+            <span class="v">Apex</span>
+          </div>
+
+          <div class="impact-row">
+            <span class="k">Seguridad</span>
+            <span class="v">Checkmarx</span>
+          </div>
+
+          <div class="impact-row">
+            <span class="k">Patrones</span>
+            <span class="v">fflib Architecture</span>
+          </div>
+
+          <div class="impact-row">
+            <span class="k">Calidad</span>
+            <span class="v">SAST · CI/CD</span>
+          </div>
+
         </div>
+
       </div>
-    </div>
-  </section>
 
-  <footer>
-    Hecho con <span>♥</span> por Marisa Miguel Arnal · <span>&lt;marisa.dev/&gt;</span>
-  </footer>
+    </article>
 
-  <script>
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    <!-- CARD 5 -->
+    <article class="project-card reveal">
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          navLinks.forEach(a => {
-            a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
-          });
-        }
-      });
-    }, { threshold: 0.4 });
+      <span class="project-icon">🛡️</span>
 
-    sections.forEach(s => observer.observe(s));
-  </script>
+      <div class="project-tag">
+        SEGUROS · SERVICE CLOUD · LEGACY
+      </div>
 
-</body>
+      <h3>Transformación digital de operaciones en aseguradora</h3>
 
-</html>
+      <p>
+        Asumí en solitario la responsabilidad técnica completa
+        de la plataforma Salesforce Service Cloud de una empresa aseguradora,
+        gestionando mantenimiento evolutivo y nuevos desarrollos a medida.
+      </p>
+
+      <p>
+        El mayor reto fue comprender e integrar código heredado
+        sin documentación suficiente,
+        garantizando estabilidad en producción
+        mientras modernizaba la plataforma progresivamente.
+      </p>
+
+      <p>
+        Diseñé e implementé la solución de gestión de incidencias,
+        cubriendo el ciclo completo del siniestro:
+        apertura, asignación, seguimiento y resolución.
+      </p>
+
+      <p>
+        Desarrollé componentes LWC y lógica Apex reutilizable,
+        optimizando triggers y automatizaciones
+        para respetar governor limits en entornos de alto volumen.
+      </p>
+
+      <p>
+        Gestioné Email-to-Case e integración con call center externo,
+        automatizando la creación de casos
+        con contexto del cliente precargado.
+      </p>
+
+      <p>
+        Trabajé además sobre configuración DNS corporativa:
+        SPF, DKIM y DMARC,
+        garantizando autenticación y entregabilidad segura del correo.
+      </p>
+
+      <div class="project-stat">
+        Gestión integral de plataforma enterprise legacy
+      </div>
+
+      <div class="project-techs">
+        <span class="tech-tag">Service Cloud</span>
+        <span class="tech-tag">Apex</span>
+        <span class="tech-tag">LWC</span>
+        <span class="tech-tag">Flows</span>
+        <span class="tech-tag">Email-to-Case</span>
+        <span class="tech-tag">DNS</span>
+        <span class="tech-tag">SPF/DKIM/DMARC</span>
+        <span class="tech-tag">Legacy Migration</span>
+      </div>
+
+    </article>
+
+    <!-- PORTFOLIO -->
+    <article class="project-card reveal">
+
+      <span class="project-icon">🧩</span>
+
+      <div class="project-tag">
+        PORTFOLIO · UI
+      </div>
+
+      <h3>Presentación profesional</h3>
+
+      <p>
+        Este portfolio está construido con HTML, CSS y JavaScript puro,
+        siguiendo una estructura modular orientada a destacar experiencia,
+        habilidades y resultados en Salesforce y desarrollo web.
+      </p>
+
+      <p>
+        El diseño utiliza una estética técnica minimalista,
+        navegación responsive y componentes reutilizables,
+        manteniendo coherencia visual en toda la experiencia.
+      </p>
+
+      <p>
+        Incluye animaciones scroll reveal,
+        arquitectura visual modular y un sistema responsive
+        optimizado para escritorio y dispositivos móviles.
+      </p>
+
+      <div class="project-stat">
+        Portfolio técnico 100% custom sin frameworks
+      </div>
+
+      <div class="project-techs">
+        <span class="tech-tag">HTML</span>
+        <span class="tech-tag">CSS</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">Responsive</span>
+        <span class="tech-tag">UI/UX</span>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
