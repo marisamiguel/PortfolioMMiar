@@ -762,3 +762,101 @@ footer span { color: var(--cyan); }
   font-weight: 500;
   text-align: right;
 }
+/* ─────────────────────────────
+   IMPACT PANEL
+───────────────────────────── */
+
+.impact-panel {
+  background: rgba(0,229,200,0.04);
+  border: 0.5px solid rgba(0,229,200,0.12);
+  border-radius: 14px;
+  padding: 1.4rem;
+  height: 100%;
+}
+
+.impact-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 1.2rem;
+}
+
+.impact-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 12px 0;
+  border-bottom: 0.5px solid rgba(255,255,255,0.06);
+}
+
+.impact-row:last-child {
+  border-bottom: none;
+}
+
+.impact-row .k {
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.impact-row .v {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: right;
+}
+
+/* ─────────────────────────────
+   MOBILE FIX FEATURED CARDS
+───────────────────────────── */
+
+@media (max-width: 900px) {
+
+  .project-card.featured {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-card.featured .project-body {
+    width: 100%;
+  }
+
+  .impact-panel {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .project-card {
+    padding: 1.4rem;
+  }
+
+  .project-card p {
+    font-size: 14px;
+  }
+
+  .project-techs {
+    gap: 8px;
+  }
+
+  .tech-tag {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .impact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .impact-row .v {
+    text-align: left;
+  }
+
+}
