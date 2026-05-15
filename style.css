@@ -808,55 +808,47 @@ footer span { color: var(--cyan); }
   text-align: right;
 }
 
-/* ─────────────────────────────
-   MOBILE FIX FEATURED CARDS
+//* ─────────────────────────────
+   FIX REAL PARA MOBILE PROJECTS
 ───────────────────────────── */
 
 @media (max-width: 900px) {
 
-  .project-card.featured {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
-  .project-card.featured .project-body {
-    width: 100%;
+  .project-card.featured {
+    display: flex !important;
+    flex-direction: column;
+    grid-column: auto !important;
+  }
+
+  .project-body {
+    height: auto !important;
   }
 
   .impact-panel {
-    width: 100%;
+    height: auto !important;
   }
 
 }
 
+/* extra seguridad */
 @media (max-width: 600px) {
 
+  #proyectos {
+    display: block;
+  }
+
+  .projects-grid {
+    display: block;
+  }
+
   .project-card {
-    padding: 1.4rem;
-  }
-
-  .project-card p {
-    font-size: 14px;
-  }
-
-  .project-techs {
-    gap: 8px;
-  }
-
-  .tech-tag {
-    font-size: 10px;
-    padding: 4px 8px;
-  }
-
-  .impact-row {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .impact-row .v {
-    text-align: left;
   }
 
 }
