@@ -808,47 +808,49 @@ footer span { color: var(--cyan); }
   text-align: right;
 }
 
-//* ─────────────────────────────
-   FIX REAL PARA MOBILE PROJECTS
+/* ─────────────────────────────
+   FIX MOBILE PROJECTS (CORRECTO)
 ───────────────────────────── */
 
 @media (max-width: 900px) {
 
+  /* solo colapsa a 1 columna, NO cambies display */
   .projects-grid {
-    display: grid;
     grid-template-columns: 1fr;
   }
 
+  /* featured deja de ser grid en móvil */
   .project-card.featured {
-    display: flex !important;
+    grid-column: auto;
+    display: flex;
     flex-direction: column;
-    grid-column: auto !important;
+    gap: 1.5rem;
   }
 
+  /* evita problemas de altura */
   .project-body {
-    height: auto !important;
+    height: auto;
   }
 
   .impact-panel {
-    height: auto !important;
+    height: auto;
   }
-
 }
 
-/* extra seguridad */
 @media (max-width: 600px) {
 
-  #proyectos {
-    display: block;
-  }
-
-  .projects-grid {
-    display: block;
-  }
-
   .project-card {
-    display: flex;
+    padding: 1.4rem;
+  }
+
+  .impact-row {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .impact-row .v {
+    text-align: left;
   }
 
 }
